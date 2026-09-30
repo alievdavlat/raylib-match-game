@@ -17,6 +17,15 @@
       }
     },
     {
+      "name": "msys2-release",
+      "displayName": "MSYS2 Release (for sharing)",
+      "inherits": "msys2",
+      "binaryDir": "${sourceDir}/build/msys2-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
       "name": "vcpkg",
       "displayName": "vcpkg (per-project packages)",
       "generator": "Ninja",
@@ -36,6 +45,7 @@
   ],
   "buildPresets": [
     { "name": "msys2", "configurePreset": "msys2" },
+    { "name": "msys2-release", "configurePreset": "msys2-release" },
     { "name": "vcpkg", "configurePreset": "vcpkg" }
   ]
 }

@@ -1,0 +1,15 @@
+raylib-match-game
+=================
+
+Run match-game.exe. No installation needed.
+
+Controls
+  Click a tile, then click a neighbouring tile to swap them.
+  Line up 3 or more equal tiles to score.
+  Esc quits.
+
+Windows may show "Windows protected your PC" the first time,
+because the game is not code-signed. Click "More info", then "Run anyway".
+
+Keep all files in this folder together: the game needs the two .dll files
+and the resources folder next to match-game.exe.

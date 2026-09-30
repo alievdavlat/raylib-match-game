@@ -16,6 +16,11 @@ add_executable(match-game
 target_link_libraries(match-game PRIVATE raylib)
 target_compile_options(match-game PRIVATE -Wall -Wextra)
 
+# Release builds are what players run: open only the game window, no console window
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+  set_target_properties(match-game PROPERTIES WIN32_EXECUTABLE ON)
+endif()
+
 add_custom_command(TARGET match-game POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_directory
     ${CMAKE_SOURCE_DIR}/resources $<TARGET_FILE_DIR:match-game>/resources)
